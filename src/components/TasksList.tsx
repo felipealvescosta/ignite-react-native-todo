@@ -22,6 +22,7 @@ export interface Task {
 
 interface TasksListProps {
   tasks: Task[];
+  editTask: (id:number, title: string)=> void;
   toggleTaskDone: (id: number) => void;
   removeTask: (id: number) => void;
 }
@@ -29,6 +30,7 @@ interface TasksListProps {
 export function TasksList({
   tasks,
   toggleTaskDone,
+  editTask,
   removeTask,
 }: TasksListProps) {
   return (
